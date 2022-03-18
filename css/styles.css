@@ -142,13 +142,12 @@ nav button {
     font-family: 'Old Standard TT',serif;
     font-weight: 100;
     width: min-content;
-    font-size: 2.3rem;
+    /* font-size: 2.3rem; */
+    font-size: calc(0.5rem + 11vw);
     line-height: 4.5rem;
 }
 
 #start-link {
-    
-    
     width: min-content; 
     gap: 1em; 
     border: none;
@@ -166,7 +165,6 @@ nav button {
 /* animación botón */
 @keyframes shining-btn {
     0%{background-image:linear-gradient(45deg, transparent 0%, #ffffff5e, transparent 15%);}
-
     1%{background-image:linear-gradient(45deg, transparent 8%, #ffffff5e, transparent 30%)}
     2.25%{background-image:linear-gradient(45deg, transparent 18%, #ffffff5e, transparent 45%)}
     3.5%{background-image:linear-gradient(45deg, transparent 27%, #ffffff5e, transparent 60%)}
@@ -177,18 +175,15 @@ nav button {
     9.75%{background-image:linear-gradient(45deg, transparent 70%, #ffffff5e, transparent 140%)}
     11%{background-image:linear-gradient(45deg, transparent 80%, #ffffff5e, transparent 155%)}
     12.25%{background-image:linear-gradient(45deg, transparent 90%, #ffffff5e, transparent 170%);
-    color:rgb(251, 252, 229)}
+    color:var(--whiteText)}
     100%{background-image:linear-gradient(45deg, transparent 90%, #ffffff5e, transparent 170%)}
 }
 /* ends animación botón */
 
 .start-btn {
-    font-size: 1.2em;
-    color: var(--whiteText);
-    text-transform: uppercase;
-    border: 1.5px solid white;
-    padding: 1em;
-    border-radius: 15em;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.822);
+    /* border: 1.5px solid white; */
     animation-name: shining-btn;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -1238,7 +1233,7 @@ fieldset label {
     }
 
     .amaze-title {
-        font-size: 3rem;
+        /* font-size: 3rem; */
         line-height: 5rem;
     }
 
@@ -1413,7 +1408,7 @@ fieldset label {
     }
 
     .amaze-title {
-        font-size: 3.5rem;
+        /* font-size: 3.5rem; */
         top: 18vh;
         line-height: 5.5rem;
     }
@@ -1571,7 +1566,7 @@ fieldset label {
     }
 
     .amaze-title {
-        font-size: 6.5rem;
+        /* font-size: 6.5rem; */
         top: 19vh;
         line-height: 9.5rem;
     }
@@ -1876,7 +1871,7 @@ fieldset label {
     }
 
     .amaze-title {
-        font-size: 7rem;
+        /* font-size: 7rem; */
     }
 
     .hero-background .hero-banner {
@@ -2149,7 +2144,7 @@ fieldset label {
 
     .amaze-title {
         position: unset;
-        font-size: 7rem;
+        font-size: calc(1rem + 9vw);
         width: min-content;
     }
 
