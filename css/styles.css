@@ -246,7 +246,8 @@ footer {
     font-style: italic;
     text-transform: uppercase;
     font-weight: 100;
-    font-size: 1.9rem;
+    /* font-size: 1.9rem; */
+    font-size: calc(1rem + 3.2vw);
 }
 
     /* Responsive video */
@@ -278,71 +279,28 @@ footer {
     margin-top: -1em;
 }
 
-.text {
-    justify-content: space-around;
-}
-
 .welcome-section p {
-    width: 80%;
     text-align: justify;
-    font-size: 1.3em;
-    line-height: 1.7em;
+     /* font-size: 1.3em; */
+    line-height: 1.7em; 
 }
 
     /* eye divider */
 .rule {
     border-bottom: 2px solid var(--primary);
-    width: 36%;
-}
-
-.eye-divider {
-    display: flex;
-    gap: 0.3em;
-    justify-content: space-around;
-    align-items: center;
-    width: 90%;
 }
 
 .fa-eye {
     color: var(--primary);
     font-size: 1.2em;
 }
-
-.eye-background {
-    position: absolute;
-    top: -11px;
-    left: 45%;
-    background-color: #dbdada;
-    width: 38px;
-}
-    /* ends eye divisor  */
+    /* ends eye divider  */
 
     /* next button */
-.next {
-    all: unset;
-    display: flex;
-    align-items: baseline;
-    gap: 0.3em;
-    align-self: end;
-    border: 1px solid var(--primary);
-    border-radius: 20px;
-    padding: 0.2em 0.5rem;
-    text-transform: uppercase;
-    background-color: #287c8121;
-    transform: translate(-1em, 0em);
-}
-
-.next a {
-    color: var(--primary);
-    text-decoration: none;
-
-}
-
 .next .fa-angle-down {
     color: var(--primary);
     font-size: 0.8rem;
 }
-    /* ends next btn */
 
 
 /* BEST-ROUTINES */
@@ -354,7 +312,6 @@ footer {
 
 .best-routines-section img {
     box-shadow: 0px 1px 5px 0px black;
-    width: 90%;
 }
 
 /* SINGLE-PAYMENT */
@@ -1196,9 +1153,6 @@ fieldset label {
     font-size: 0.9rem;
 }
 
-
-
-
 /* ... */
 
 
@@ -1232,9 +1186,6 @@ fieldset label {
     }
 
     /* welcome section */
-    .welcome-section h1 {
-        font-size: 2.1rem;
-    }
 
     .next {
         transform: translate(-2em, 0.2em);
@@ -1394,17 +1345,14 @@ fieldset label {
     }
 
     /* welcome section */
-    .welcome-section h1 {
-        font-size: 2.4rem;
-    }
 
     .divider_1 {
         margin-top: -1.4em;
     }
 
     .welcome-section p {
-        font-size: 1.4em;
-        line-height: 1.8em;
+        /* font-size: 1.4em;
+        line-height: 1.8em; */
     }
 
     /* ABOUT PAGE  */
@@ -1564,9 +1512,6 @@ fieldset label {
     }
 
     /* welcome section */
-       .welcome-section h1 {
-        font-size: 3.4rem;
-    }
 
     .next {
         transform: translate(-4em, 0.2em) scale(1.3);
@@ -1861,9 +1806,6 @@ fieldset label {
     }
 
     /* wlcome section */
-    .welcome-section h1 {
-        font-size: 3.8rem;
-    }
 
     .welcome-section p {
         font-size: 1.5em;
@@ -2364,11 +2306,6 @@ fieldset label {
 
     footer p {
         font-size: 1rem;
-    }
-
-    /* welcome section */
-    .welcome-section h1 {
-        font-size: 3.2rem;
     }
 
     .divider_1 {
