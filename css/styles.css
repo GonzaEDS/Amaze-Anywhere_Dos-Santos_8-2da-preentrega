@@ -36,7 +36,7 @@ header {
 }
 
 .logo {
-    height: 2.4em;
+    height: calc(1.8rem + 1.1vw);
 }
 
 /* start nav toggle icon*/
@@ -98,7 +98,6 @@ nav a {
     text-decoration: none;
     color: var(--whiteText);
     font-size: 1.2em;
-    /* opacity: 0; */
     font-weight: 100;
     transition: 250ms ease-in-out;
 }
@@ -133,8 +132,8 @@ nav button {
 .hero-background {
     grid-area: hero;
     background-image: url(../img/hero-banner.webp);
-    background-size: 141vh;
-    background-position: -70vh 0;
+    background-size: cover;
+    background-position: 80%;
     min-height: 100vh;
 }
 
@@ -142,8 +141,7 @@ nav button {
     font-family: 'Old Standard TT',serif;
     font-weight: 100;
     width: min-content;
-    /* font-size: 2.3rem; */
-    font-size: calc(0.5rem + 11vw);
+    font-size: calc(1.2rem + 7vw);
 }
 
 #start-link {
@@ -158,7 +156,7 @@ nav button {
 }
 
 .svg-inline--fa {
-    font-size: 1.5em;
+    font-size: calc(1rem + 0.5vw);
 }
 
 /* animación botón */
@@ -186,9 +184,11 @@ nav button {
     animation-timing-function: ease-in-out;
     animation-duration: 3.8s;
     animation-delay: 0s;
+    font-size: calc(0.75rem + 1vw);
 }
 
 /* general */
+
 section h1, section h2, section h3 {
     color: #161616;
 }
@@ -199,39 +199,19 @@ section h1 {
     font-style: italic;
     text-transform: uppercase;
     font-weight: 100;
-    font-size: 1.4rem;
+    margin-bottom: 0;
+    font-size: calc(0.8rem + 3.9vw);
 }
 
-.flex-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 1.5em;
-}
-
-.flex-item-c {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.flex-item-r {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.section-spacing {
+    gap: calc(1rem + 1vw);
+    padding: calc(1rem + 2.5vw) 0;
 }
 
 /* FOOTER */
-
 footer {
     color: #7a7a7a;
-    height: 4vh;
-    font-size: 0.8em;
-    display: flex;
-    align-items: center;
+    font-size: calc(0.5rem + 1vw);
 }
 
 /* WELCOME SECTION */
@@ -241,48 +221,17 @@ footer {
     background-image: linear-gradient(80deg, var(--whiteBlueBg) 0%, #d9d9e187 100%);
 }
 
-.welcome-section h1 {
-    font-family: 'Old Standard TT',serif;
-    font-style: italic;
-    text-transform: uppercase;
-    font-weight: 100;
-    /* font-size: 1.9rem; */
-    font-size: calc(1rem + 3.2vw);
-}
-
-    /* Responsive video */
-.video {
-    position: relative;
-    overflow: hidden;
-    /* width: 93%;
-    padding-top: 51.5%; */
-    width: 100%;
-    padding-top: 55.5%;
-    margin: 0 auto;
-}
-
-.iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-    /* ends rv */
-
 .divider_1 {
     border-bottom: 2px solid var(--primary);
-    width: 3.7em;
-    margin-top: -1em;
+    margin-top: -0.8em;
+    width: calc(2.1rem + 5vw);
+    margin-bottom: 0.5rem;
 }
 
 .welcome-section p {
     text-align: justify;
-     /* font-size: 1.3em; */
-    line-height: 1.7em; 
+    line-height: calc(1.8rem + 1.8vw);
+    font-size: calc(1.1rem + 0.75vw);
 }
 
     /* eye divider */
@@ -292,14 +241,14 @@ footer {
 
 .fa-eye {
     color: var(--primary);
-    font-size: 1.2em;
+    font-size: calc(0.9rem + 0.8vw);
 }
     /* ends eye divider  */
 
     /* next button */
-.next .fa-angle-down {
+.next .fa-angle-down, .next {
     color: var(--primary);
-    font-size: 0.8rem;
+    font-size: calc(0.5rem + 1vw);
 }
 
 
@@ -307,72 +256,55 @@ footer {
 
 .best-routines-section {
     grid-area: best-routines;
-    padding: 3rem 0;
 }
 
 .best-routines-section img {
     box-shadow: 0px 1px 5px 0px black;
+    box-shadow: 0px 1px calc(3px + 0.85vw) 0px black;
 }
 
-/* SINGLE-PAYMENT */
+/* single payment section */
+
 .single-payment-section {
     background-image: url(../img/girl-amazed1.webp);
     background-size: 135%;
     background-position: -250%;
     grid-area: single-payment;
-    min-height: 15rem;
 }
 
 .sp-card-bg {
-    position: relative;
-    background: linear-gradient(294deg, rgb(55 115 117) 0%, rgb(51 113 114) 46%, rgb(49 100 102) 100%);
-    background: linear-gradient(294deg, rgb(55 115 117 / 79%) 0%, rgb(51 113 114 / 79%) 46%, rgb(49 100 102 / 68%) 100%);
     background: linear-gradient(294deg, rgb(55 115 117 / 88%) 0%, rgb(51 113 114 / 88%) 46%, rgb(49 100 102 / 82%) 100%);
-    width: 100%;
-    height: 100%;
 }
 
     /* offer band */
 .offer-band-box {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 6em;
-    width: 7rem;
+    height: calc(30% + 12vw);
+    width: 40%;
     overflow: hidden;
 }
 
 .offer-band {
-    color: rgb(238 235 235);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 100;
-    font-size: 1.4em;
-    width: 6em;
-    background-color: black;
+    font-size: calc(0.8rem + 3.7vw);
+    width: 130%;
     background-image: linear-gradient(359deg, black 23%, #b3b3b354 55%, #ff040400), linear-gradient(180deg, black 100%, #6c5d5d9c 100%, #ff000000);
-    transform: rotate(45deg) translate(16%, 20%);
+    transform: rotate(45deg);
+    position: absolute;
+    top: calc(6% + 3.2VW);
+    left: 7%;
 }
-    /* ends ob */
+
 
 .sp-card {
-    background-color: #555555;
-    width: 92%;
-    height: 80%;
-    justify-content: flex-start;
+    background-color: #4d4d4d;
 }
 
 .sp-card h1 {
     color: var(--whiteText);
+    font-size: calc(0.5rem + 5vw);
 }
 
-.sp-card-head {
-    width: 100%;
-    height: 30%;
-}
 
 .sp-card-body {
     background-color: #eeebeb;
@@ -385,36 +317,29 @@ footer {
 
 }
 
-.sp-card-body button {
+.sp-card-body a {
     font-family: var(--sansSerifFont);
-    color: rgb(238, 235, 235);
     font-weight: 500;
-    font-size: 0.9rem;
-    border: 2px solid #6b6a6adb;
-    border-radius: 50px;
-    background-color: #555555c2;
-    min-width: 4rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: all 0.8s;
+    border: none;
+    background-color: #555555da;
+    transition: all 0.3s;
+    font-size: calc(0.2rem + 2vw);
 }
-
-.sp-card-body button a {
-    all: inherit;
+.sp-card-body a:hover {
+    background-color: black;
 }
 
 .price {
-    font-size: 1.5rem;
-    gap: 0.2em;
+    font-size: calc(0.8rem + 6.3vw);
 }
 
-.price small{
-    font-weight: 600;
-    font-size: 1.1rem;
+.price small {
+    font-size: calc(0.7rem + 5.3vw);
 }
 
-.fa-check-circle {
-    font-size: 1rem;
+.sp-card-body p, .fa-check-circle {
+    font-size: calc(0.5rem + 2.3vw);
+    margin-bottom: 0;
 }
 
 /* pages... */
@@ -593,85 +518,6 @@ footer {
     /* background-color: #f4f4f4; */
     background-color: #f5f7f8;
 }
-
-/* goals cards effect animation */
-@keyframes shadow {
-    0%{background: linear-gradient(90deg, #ffffff00 60%, #0000002b);}
-    0.5%{background: linear-gradient(85deg, #ffffff00 60%, #0000002b);}
-    1.0%{background: linear-gradient(80deg, #ffffff00 60%, #0000002b);}
-    1.5%{background: linear-gradient(75deg, #ffffff00 60%, #0000002b);}
-    2.0%{background: linear-gradient(70deg, #ffffff00 60%, #0000002b);}
-    2.5%{background: linear-gradient(65deg, #ffffff00 60%, #0000002b);}
-    3.0%{background: linear-gradient(60deg, #ffffff00 60%, #0000002b);}
-    3.5%{background: linear-gradient(55deg, #ffffff00 60%, #0000002b);}
-    4.0%{background: linear-gradient(50deg, #ffffff00 60%, #0000002b);}
-    4.5%{background: linear-gradient(45deg, #ffffff00 60%, #0000002b);}
-    5.0%{background: linear-gradient(40deg, #ffffff00 60%, #0000002b);}
-    5.5%{background: linear-gradient(35deg, #ffffff00 60%, #0000002b);}
-    6.0%{background: linear-gradient(30deg, #ffffff00 60%, #0000002b);}
-    6.5%{background: linear-gradient(25deg, #ffffff00 60%, #0000002b);}
-    7.0%{background: linear-gradient(20deg, #ffffff00 60%, #0000002b);}
-    7.5%{background: linear-gradient(15deg, #ffffff00 60%, #0000002b);}
-    8.0%{background: linear-gradient(10deg, #ffffff00 60%, #0000002b);}
-    8.5%{background: linear-gradient(5deg, #ffffff00 60%, #0000002b);}
-    9.0%{background: linear-gradient(1deg, #ffffff00 60%, #0000002b);}
-    9.5%{background: linear-gradient(355deg, #ffffff00 60%, #0000002b);}
-    10.0%{background: linear-gradient(350deg, #ffffff00 60%, #0000002b);}
-    10.5%{background: linear-gradient(345deg, #ffffff00 60%, #0000002b);}
-    11.0%{background: linear-gradient(340deg, #ffffff00 60%, #0000002b);}
-    11.5%{background: linear-gradient(335deg, #ffffff00 60%, #0000002b);}
-    12.0%{background: linear-gradient(330deg, #ffffff00 60%, #0000002b);}
-    12.5%{background: linear-gradient(325deg, #ffffff00 60%, #0000002b);}
-    13.0%{background: linear-gradient(320deg, #ffffff00 60%, #0000002b);}
-    13.5%{background: linear-gradient(315deg, #ffffff00 60%, #0000002b);}
-    14.0%{background: linear-gradient(310deg, #ffffff00 60%, #0000002b);}
-    14.5%{background: linear-gradient(305deg, #ffffff00 60%, #0000002b);}
-    15.0%{background: linear-gradient(300deg, #ffffff00 60%, #0000002b);}
-    15.5%{background: linear-gradient(295deg, #ffffff00 60%, #0000002b);}
-    16.0%{background: linear-gradient(290deg, #ffffff00 60%, #0000002b);}
-    16.5%{background: linear-gradient(285deg, #ffffff00 60%, #0000002b);}
-    17.0%{background: linear-gradient(280deg, #ffffff00 60%, #0000002b);}
-    17.5%{background: linear-gradient(275deg, #ffffff00 60%, #0000002b);}
-    18.0%{background: linear-gradient(270deg, #ffffff00 60%, #0000002b);}
-    18.5%{background: linear-gradient(265deg, #ffffff00 60%, #0000002b);}
-    19.0%{background: linear-gradient(260deg, #ffffff00 60%, #0000002b);}
-    19.5%{background: linear-gradient(255deg, #ffffff00 60%, #0000002b);}
-    20.0%{background: linear-gradient(250deg, #ffffff00 60%, #0000002b);}
-    20.5%{background: linear-gradient(245deg, #ffffff00 60%, #0000002b);}
-    21.0%{background: linear-gradient(240deg, #ffffff00 60%, #0000002b);}
-    21.5%{background: linear-gradient(235deg, #ffffff00 60%, #0000002b);}
-    22.0%{background: linear-gradient(230deg, #ffffff00 60%, #0000002b);}
-    22.5%{background: linear-gradient(225deg, #ffffff00 60%, #0000002b);}
-    23.0%{background: linear-gradient(220deg, #ffffff00 60%, #0000002b);}
-    23.5%{background: linear-gradient(215deg, #ffffff00 60%, #0000002b);}
-    24.0%{background: linear-gradient(210deg, #ffffff00 60%, #0000002b);}
-    24.5%{background: linear-gradient(205deg, #ffffff00 60%, #0000002b);}
-    25.0%{background: linear-gradient(200deg, #ffffff00 60%, #0000002b);}
-    25.5%{background: linear-gradient(195deg, #ffffff00 60%, #0000002b);}
-    26.0%{background: linear-gradient(190deg, #ffffff00 60%, #0000002b);}
-    26.5%{background: linear-gradient(185deg, #ffffff00 60%, #0000002b);}
-    27.0%{background: linear-gradient(180deg, #ffffff00 60%, #0000002b);}
-    27.5%{background: linear-gradient(175deg, #ffffff00 60%, #0000002b);}
-    28.0%{background: linear-gradient(170deg, #ffffff00 60%, #0000002b);}
-    28.5%{background: linear-gradient(165deg, #ffffff00 60%, #0000002b);}
-    29.0%{background: linear-gradient(160deg, #ffffff00 60%, #0000002b);}
-    29.5%{background: linear-gradient(155deg, #ffffff00 60%, #0000002b);}
-    30.0%{background: linear-gradient(150deg, #ffffff00 60%, #0000002b);}
-    30.5%{background: linear-gradient(145deg, #ffffff00 60%, #0000002b);}
-    31.0%{background: linear-gradient(140deg, #ffffff00 60%, #0000002b);}
-    31.5%{background: linear-gradient(135deg, #ffffff00 60%, #0000002b);}
-    32.0%{background: linear-gradient(130deg, #ffffff00 60%, #0000002b);}
-    32.5%{background: linear-gradient(125deg, #ffffff00 60%, #0000002b);}
-    33.0%{background: linear-gradient(120deg, #ffffff00 60%, #0000002b);}
-    33.5%{background: linear-gradient(115deg, #ffffff00 60%, #0000002b);}
-    34.0%{background: linear-gradient(110deg, #ffffff00 60%, #0000002b);}
-    34.5%{background: linear-gradient(105deg, #ffffff00 60%, #0000002b);}
-    35.0%{background: linear-gradient(100deg, #ffffff00 60%, #0000002b);}
-    35.5%{background: linear-gradient(95deg, #ffffff00 60%, #0000002b);}
-    36.0%{background: linear-gradient(90deg, #ffffff00 60%, #0000002b);}
-    100.0%{background: linear-gradient(90deg, #ffffff00 60%, #0000002b);}
-}
-/* end animation */
 
 .goals-card-fx {
     position: absolute;
@@ -1161,47 +1007,9 @@ fieldset label {
 /* referencia galaxys8 */
 @media screen and (min-width:360px) {
 
-    .flex-section {
-        row-gap: 1.8em;
-    }
-
-    nav ul, .nav-toggle-label, .text, .sp-card-body, .sp-card-body p{
-        font-size: 110%;
-    }
-
-    section h1 {
-        font-size: 1.73rem;
-    }
-
     .hero-background .hero-banner {
         padding-top: 4em;
     }
-
-    #start-link {
-        font-size: 104%;
-    }
-
-    footer {
-        height: 5vh;
-    }
-
-    /* welcome section */
-
-    .next {
-        transform: translate(-2em, 0.2em);
-    }
-
-    /* single payment section  */
-    .price {
-        font-size: 2.5rem;
-    }
-
-    .sp-card-body button {
-        font-size: 1.1rem;
-        min-width: 4.1rem;
-    }
-
-
 
     /* ABOUT PAGE */
 
@@ -1209,9 +1017,6 @@ fieldset label {
         font-size: 2.1em;
     }
 
-    .about-start-btn {
-        font-size: 1.3em;
-    }
 
     /* quick info section */
     .quick-info {
@@ -1328,31 +1133,14 @@ fieldset label {
     /* (referencia iPhone 12 Pro) */
 @media screen and (min-width:390px) {
 
-    .flex-section {
-        row-gap: 2em;
-    }
-
-    nav ul, .nav-toggle-label, .text, .sp-card-body, .sp-card-body p{
-        font-size: 120%;
-    }
-
-    section h1 {
-        font-size: 1.93rem;
-    }
 
     nav button {
         font-size: 1rem;
     }
 
-    /* welcome section */
-
-    .divider_1 {
-        margin-top: -1.4em;
-    }
-
-    .welcome-section p {
-        /* font-size: 1.4em;
-        line-height: 1.8em; */
+    /* single payment section */
+    .offer-band {
+        left: calc(5% + 3.5vw);
     }
 
     /* ABOUT PAGE  */
@@ -1364,9 +1152,6 @@ fieldset label {
         font-size: 2.3rem;
     }
 
-    .start-btn {
-        font-size: 1.4em;
-    }
 
     /* quick info section */
     .info-card h3 {
@@ -1428,11 +1213,6 @@ fieldset label {
         padding: 1.2em;
     }
 
-
-
-
-
-
 }
 
 @media screen and (min-width:414px) {
@@ -1442,116 +1222,21 @@ fieldset label {
     }
 }
 
-/* referencia iPad mini (reducido para ajustars|alaxy tab s4) */
+/* referencia iPad mini (reducido para ajustarse a galaxy tab s4) */
 @media screen and (min-width:712px) {
-
-    /* grid */
-    /* .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(30, 10vh);
-    }
-
-    .hero-background {
-        grid-row: 1/11;
-    }
-
-    .hero-background .hero-banner {
-        padding-top: 2em;
-    }
-
-    .welcome-section {
-        grid-row: 11/21;
-    }
-
-    .best-routines-section {
-        grid-row: 21/27
-    }
-
-    .single-payment-section {
-        grid-row: 27/31;
-    } */
-    /* ends grid */
 
     header a {
         font-size: 1.2rem;
     }
 
-    nav ul, .nav-toggle-label, .text, .sp-card-body, .sp-card-body p {
-        font-size: 150%;
-    }
-
     nav li a {
-        font-size: 1.6rem;
+        /* font-size: 1.6rem; */
+        font-size: calc(1rem + 0.4vw);
         line-height: 1.3;
     }
 
     nav button {
         font-size: 1.4rem;
-    }
-
-    .hero-background {
-        background-position: -74vw 0vh;
-    }
-
-    #start-link .fa-angle-down, #start-link .start-btn {
-        transform: scale(1.1);
-    }
-
-    section h1 {
-        font-size: 2.93rem;
-    }
-
-    .divider_1 {
-        border-bottom: 3px solid var(--primary);
-        width: 7rem;
-    }
-
-    /* footer */
-    footer {
-        font-size: 1.5em;
-    }
-
-    /* welcome section */
-
-    .next {
-        transform: translate(-4em, 0.2em) scale(1.3);
-    }
-
-    /* best routines section */
-    .best-routines-section img {
-        width: 85%;
-    }
-
-    /* single payment section */
-    .offer-band-box {
-        height: 10em;
-        width: 10rem;
-    }
-
-    .offer-band {
-        transform: rotate(45deg) translate(41%, 20%) scale(1.5);
-    }
-
-    .price {
-        font-size: 3.3rem;
-    }
-
-    .price small {
-        font-size: 2rem;
-    }
-
-    .fa-check-circle {
-        font-size: 1.5rem;
-    }
-
-    .sp-card-body p {
-        font-size: 2.1rem;
-    }
-
-    .sp-card-body button {
-        font-size: 1.5rem;
-        min-width: 4.9rem;
-        padding: 2px 0px;
     }
 
     /* ABOUT PAGE */
@@ -1569,10 +1254,6 @@ fieldset label {
         font-size: 4.3rem;
         padding-top: 2em;
         padding-bottom: 2em;
-    }
-
-    .about-start-btn {
-        font-size: 1.4rem;
     }
 
     /* quick info section */
@@ -1785,10 +1466,6 @@ fieldset label {
         gap: 0.9em;
     }
 
-    nav li a {
-        font-size: 1.8rem;
-    }
-
     .hero-background .hero-banner {
         padding-top: 4em;
     }
@@ -1797,38 +1474,8 @@ fieldset label {
         gap: 1.4em;
     }
 
-    #start-link .fa-angle-down, #start-link .start-btn {
-        transform: scale(1.2);
-    }
-
     .flex-section {
         row-gap: 2.5em;
-    }
-
-    /* wlcome section */
-
-    .welcome-section p {
-        font-size: 1.5em;
-        line-height: 1.9em;
-    }
-
-    .next {
-        transform: translate(-5em, 0.2em) scale(1.5);
-    }
-
-    /* single payment section */
-    .offer-band-box {
-        height: 40%;
-        width: 24%;
-    }
-
-    .offer-band {
-        transform: rotate(45deg) translate(60%, 0%) scale(1.9);
-    }
-
-    .sp-card-body button {
-        font-size: 1.7rem;
-        min-width: 5.5rem;
     }
 
     /* ABOUT PAGE */
@@ -1972,10 +1619,6 @@ fieldset label {
         list-style: none;
     }
 
-    nav li a {
-        font-size: 1.2rem;
-    }
-
     nav button {
         all: unset;
         min-width: fit-cntent;
@@ -1986,7 +1629,7 @@ fieldset label {
         margin: unset;
         text-transform: uppercase;
         font-weight: 600;
-        font-size: small;
+        font-size: calc(0.7rem + 0.4vw);
         border-radius: 50px;
         padding: 7px 20px;
         border: 2px solid var(--lighterPrimary);
@@ -2006,47 +1649,11 @@ fieldset label {
     }
 }
 
-
-
-
 /* iPad mini horizontal */
 @media screen and (min-width:1024px) {
     
-    .hero-background {
-        grid-row: 1/11;
-    }
-
-    .hero-background .hero-banner {
-        padding-top: 2em;
-    }
-
-    .welcome-section {
-        grid-row: 11/26;
-    }
-
-    .best-routines-section {
-        grid-row: 26/36
-    }
-
-    .single-payment-section {
-        grid-row: 36/43;
-    }
-    /* grid */
-
-
-    /* general */
-    .flex-section {
-        row-gap: 2em;
-    }
-
-    section h1 {
-        font-size: 3.4rem;
-    }
-
     /* HERO BANNER */
-    .hero-background {
-        background-position: -104vw 8vh;
-    }
+ 
     .hero-banner {
         display: flex;
         align-items: center;
@@ -2056,7 +1663,6 @@ fieldset label {
 
     .amaze-title {
         position: unset;
-        font-size: calc(1rem + 9vw);
         width: min-content;
     }
 
@@ -2065,16 +1671,19 @@ fieldset label {
         width: min-content;
     }
 
+    section h1 {
+        font-size: calc(0.8rem + 3.4vw);
+    }
 
     /* single payment section */
-    .offer-band-box {
-        height: 40%;
-        width: 22%;
+
+    .sp-card h1 {
+        font-size: calc(0.5rem + 4vw);
     }
 
     .offer-band {
-        width: 6.1em;
-        transform: rotate(45deg) translate(75%, 0) scale(2.1);
+        font-size: calc(0.8rem + 3.1vw);
+        left: calc(7% + 3.5vw);
     }
 
     /* ABOUT PAGE */
@@ -2235,21 +1844,6 @@ fieldset label {
 /* pantallas */
 @media screen and (min-width:1200px) {
 
-    /* grid */
-    /* .grid {
-        grid-template-rows: repeat(51, 10vh);
-    }
-    .welcome-section {
-        grid-row: 11/28;
-    }
-    .best-routines-section {
-        grid-row: 28/42
-    }
-    .single-payment-section {
-        grid-row: 42/52;
-    } */
-    /* ends grid */
-
     header {
         padding: 0 3rem 0 2rem;
     }
@@ -2258,77 +1852,18 @@ fieldset label {
         font-size: 1rem;
     }
 
-
-
-    nav li a {
-        font-size: 1.1rem;
-    }
-
-    .hero-background {
-        background-position: right center;
-        background-size: unset;
-    }
-
-    
-
     .hero-background .hero-banner {
         padding-top: 0em;
     }
 
-    #start-link {
-        font-size: 80%;
-    }
-
-    #start-link .start-btn {
-        transform: initial;
-    }
 
     /* general */
-    nav ul, .nav-toggle-label, .text, .sp-card-body {
-        font-size: unset;
-    }
-
-    .flex-section {
-        justify-content: center;
-        row-gap: 2.2em;
-    }
-
-    #start-link {
-        display: none;
-    }
 
     #start-link-to-video {
         width: min-content;
         gap: 1em;
         cursor: pointer;
-        /* transform: translate(0px, 4em); */
-    }
-
-    footer p {
-        font-size: 1rem;
-    }
-
-    .divider_1 {
-        width: 5rem;
-    }
-
-    .video {
-        /* width: 77%;
-        padding-top: 43.5%; */
-        width: 93%;
-        padding-top: 51.5%;
-        /* margin-top: -3px; */
-    }
-
-    .welcome-section .text {
-        row-gap: 3.5em
-    }
-
-    .text p {
-        font-size: 1.7em;
-        line-height: 1.8em;
-        width: 86%;
-    }
+    } 
 
     .eye-divider {
         display: flex;
@@ -2340,47 +1875,21 @@ fieldset label {
 
     .rule {
         border-bottom: 2px solid var(--primary);
-        width: 41%;
-    }
-
-    .next {
-        display: none;
     }
 
     /* best routines section */
-    .best-routines-section img {
-        margin-top: 0.5em;
-        box-shadow: 1px 1px 11px 0px black;
-        width: 82%;
-    }
-
+    
     .best-routines-section h1 {
-        font-size: 3.2rem;
         line-height: 1.3;
         width: 65%;
     }
 
-    /* single payment section */
-    .offer-band-box {
-        height: 40%;
-        width: 20%;
-    }
-
-    .offer-band {
-        width: 6.25em;
-        transform: rotate(45deg) translate(86%, 0%) scale(2.5);
-    }
-
-    .sp-card {
-        width: 88%;
-    }
-
     .price {
-        font-size: 5rem;
+        font-size: calc(0.45rem + 5.5vw);
     }
 
     .price small {
-        font-size: 3rem;
+        font-size: calc(0.35rem + 4.5vw);
     }
 
     /* ABOUT PAGE */
@@ -2394,9 +1903,6 @@ fieldset label {
         padding-left: 0;
     }
 
-    .about-start-btn {
-        display: none;
-    }
     .header-titles {
         place-self: center;
         padding: unset;
@@ -2442,7 +1948,6 @@ fieldset label {
 
 
     .info-card p {
-
         font-size: 1.2rem;
     }
 
@@ -2451,10 +1956,6 @@ fieldset label {
         font-size: 2.4rem;
     }
 
-    .about-video .video {
-        width: 85%;
-        padding-top: 48.5%;
-    }
     /* course goals section */
 
     .course-goals {
@@ -2523,7 +2024,6 @@ fieldset label {
     .guarantee-card {
         padding: 4em 2em;
     }
-
 
     .guarantee-card h2 {
         font-size: 2.3rem;
