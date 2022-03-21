@@ -964,9 +964,6 @@ fieldset label {
     font-size: 0.9rem;
 }
 
-/* ... */
-
-
 /* MEDIA QUERIES */
 
 /* referencia galaxys8 */
@@ -982,12 +979,6 @@ fieldset label {
     .quick-info {
         gap: 1.6em;
     }
-
-    /* course-goals */
-
-    /* .goals-text p {
-        color: #686868db;
-    } */
 
     /* FAQS PAGE */
 
@@ -1072,7 +1063,6 @@ fieldset label {
     /* (referencia iPhone 12 Pro) */
 @media screen and (min-width:390px) {
 
-
     nav button {
         font-size: 1rem;
     }
@@ -1137,8 +1127,7 @@ fieldset label {
     }
 
     nav li a {
-        /* font-size: 1.6rem; */
-        font-size: calc(1rem + 0.4vw);
+        font-size: calc(0.8rem + 0.4vw);
         line-height: 1.3;
     }
 
@@ -1461,9 +1450,9 @@ fieldset label {
         margin: unset;
         text-transform: uppercase;
         font-weight: 600;
-        font-size: calc(0.7rem + 0.4vw);
+        font-size: calc(0.65rem + 0.4vw);
         border-radius: 50px;
-        padding: 7px 20px;
+        padding: 0.3rem 0.8rem;
         border: 2px solid var(--lighterPrimary);
         transition: background-color 0.5s, color 0.5s;
         white-space: nowrap;
@@ -1475,7 +1464,6 @@ fieldset label {
         font-weight: 700;
     }
 
-    /* ends navbar */
 
     .hero-banner {
         padding-left: 8rem;
@@ -1485,7 +1473,6 @@ fieldset label {
     .quick-info {
         flex-direction: row;
         justify-content: space-evenly;
-        /* gap: unset; */
     }
 
     .info-card {
@@ -1573,7 +1560,6 @@ fieldset label {
     }
 
     .guarantee-card img {
-
         width: 45%;
     }
 
@@ -1811,10 +1797,12 @@ fieldset label {
     .buy-grid {
         grid-template-rows: 55vh auto auto;
     }
+
     .summary-card {
         gap: 3em;
         width: 70%;
     }
+
     .sumary-card img {
         width: 23%;
     }
