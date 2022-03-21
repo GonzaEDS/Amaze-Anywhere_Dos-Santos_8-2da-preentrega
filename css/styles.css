@@ -4,7 +4,7 @@
 :root {
     scroll-behavior: smooth;
 
-    --darkTransparentBg: #060606eb;
+    --darkTransparentBg: #060606f7 /*#060606eb*/;
     --whiteText: rgb(238, 235, 235);
     --whiteBlueBg: #d4d4de;
     --primary: #287c81fa;
@@ -84,7 +84,7 @@ nav {
     left: 0;
     width: 100%;
     height: auto;
-    background: #060606f7;
+    background: var(--darkTransparentBg);
     flex-direction: column;
 }
 
@@ -205,7 +205,7 @@ section h1 {
 
 .section-spacing {
     gap: calc(1rem + 1vw);
-    padding: calc(1rem + 2.5vw) 0;
+    padding: calc(1.7rem + 2.5vw) 0;
 }
 
 /* FOOTER */
@@ -347,14 +347,9 @@ footer {
 .header-titles {
     font-family: var(--titlesFont);
     font-weight: 100;
-    font-style: italic;
-    text-align: center;
     color: white;
-    font-size: 2em;
-    text-transform: uppercase;
-    padding-top: 4em;
-    padding-bottom: 2em;
-    /* padding-left: 3.4em; */
+    font-size: calc(1.7rem + 2vw);
+    width: min-content;
 }
 
 /* ABOUT */
@@ -362,7 +357,8 @@ footer {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 100vh) 55vh 114vh;
+    /* grid-template-rows: repeat(2, 100vh) 55vh 114vh; */
+    grid-template-rows: 100vh repeat(3, auto);
     grid-template-areas:
         "banner"
         "quick-info"
@@ -381,10 +377,6 @@ footer {
 /* banner */
 .pages-background {
     grid-area: banner;
-    /* background-repeat: repeat-x;
-    min-width: 100%;
-    background-position: 15em -2em;
-    background-image: url(../img/ribbon-spread-1-1024x576.webp); */
     background-image: url(../img/fondo-prueba1.png);
     background-size: 1041%;
     background-position: 76% 100%;
@@ -392,19 +384,15 @@ footer {
 }
 
 .about-banner {
-    position: relative;
-    align-items: center;
     background: linear-gradient(90deg, rgb(0 0 0) 23%, rgb(0 0 0 / 82%) 44%, rgb(19 0 32 / 28%) 100%);
+    padding-top: 5rem;
 }
 
 .about-start-btn {
-    font-size: 1.1em;
+    font-size: calc(0.6rem + 1.2vw);
     color: var(--whiteText);
-    text-transform: uppercase;
-    border: 1px solid white;
-    padding: 1em;
-    border-radius: 4em;
-    width: 10em;
+    padding: 0.5rem;
+    width: calc(5rem + 8.9vw);
 }
 
 #about-start a {
@@ -435,27 +423,33 @@ footer {
 .quick-info {
     grid-area: quick-info;
     background: linear-gradient(45deg, #31758f, #23434fc7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 2.8rem;
+
 }
 
 .info-card {
     display: flex;
     flex-direction: column;
     width: 80%;
+    width: min-content;
     gap: 1em;
 }
 
+.info-card-img {
+    width: calc(10.8rem + 11vw);
+
+}
+
 .info-card img {
-    place-self: center;
     border-radius: 15px;
     height: 100%;
-    width: 100%;
     box-shadow: 0px 0px 3px 2px #2a5a6c;
 }
+.info-card-text {
+    padding: 0;
+    min-width: 51%;
+}
+
 .info-card h3 {
     color: var(--whiteText);
     font-family: var(--sansSerifFont);
@@ -465,7 +459,7 @@ footer {
 }
 
 .info-card p {
-    font-size: 1.1rem;
+    font-size: calc(1.3rem + 0.215vw);
     line-height: 1.4;
     color: #d5e7ec;
     text-align: justify;
@@ -476,46 +470,21 @@ footer {
 .about-video {
     background-image: linear-gradient(80deg, #d4d4deb8 0%, #d9d9e15c 100%);
     grid-area: about;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 2em;
-    padding: 2em 0;
-    align-items: center;
 }
 
 /* course goals section*/
 
 .course-goals {
     grid-area: goals;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 1.5em;
-    align-items: center;
     background-size: cover;
-    /* box-shadow: 2px 0px 2px 0px black; */
-}
-
-.course-goals h1 {
-    font-size: 1.7rem;
 }
 
 .goals-cards-container {
-    display: flex;
-    flex-direction: column;
     filter: drop-shadow(0px 0px 1px #59636a);
-    /* box-shadow: 2px 0px 2px 0px black; */
-
 }
 
 .goals-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 33vh;
-    /* background-color: #ffffffde; */
-    /* background-color: #f4f4f4; */
+    height: calc(18vh + 19vw + 6.5rem);
     background-color: #f5f7f8;
 }
 
@@ -526,11 +495,6 @@ footer {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, #ffffff00 60%, #0000002b);
-    animation-name: shadow;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-duration: 8s;
-    animation-delay: 0;
 }
 
 .goals-img-container {
@@ -550,7 +514,6 @@ footer {
 }
 
 .goals-img-fx {
-    /* background: linear-gradient(180deg, rgba(252, 252, 252, 0), #f5f5f5); */
     background: linear-gradient(180deg, rgba(252, 252, 252, 0), #f6f8f9);
     position: absolute;
     top: 1px;
@@ -582,14 +545,16 @@ footer {
 
 .goals-text h3 {
     font-family: var(--titlesFont);
-    font-size: 1.2rem;
+    font-size: calc(0.8rem + 2.9vw);
+    margin: 0;
     font-style: italic;
     font-weight: 100;
     text-transform: uppercase;
 }
 
 .goals-text p {
-    font-size: 1rem;
+    font-size: calc(0.35rem + 3.5vw);
+    font-size: calc(0.5rem + 2.8vw);
     line-height: 1.3;
     color: #686868;
     margin-bottom: 0.5em;
@@ -1013,42 +978,16 @@ fieldset label {
 
     /* ABOUT PAGE */
 
-    .header-titles {
-        font-size: 2.1em;
-    }
-
-
     /* quick info section */
     .quick-info {
         gap: 1.6em;
     }
 
-    .info-card h3 {
-        font-size: 1.5rem;
-    }
-
-    .info-card p {
-        font-size: 1.3em;
-    }
-
-    /* about video */
-    .about-video h1 {
-        font-size: 1.85rem;
-    }
-
     /* course-goals */
-    .course-goals h1 {
-        font-size: 1.85rem;
-    }
 
-    .goals-text p {
-        font-size: 1.2rem;
+    /* .goals-text p {
         color: #686868db;
-    }
-
-    .goals-text h3 {
-        font-size: 1.33rem
-    }
+    } */
 
     /* FAQS PAGE */
 
@@ -1143,38 +1082,6 @@ fieldset label {
         left: calc(5% + 3.5vw);
     }
 
-    /* ABOUT PAGE  */
-    .about-grid {
-        grid-template-rows: repeat(2, 100vh) 55vh 112vh;
-    }
-
-    .header-titles {
-        font-size: 2.3rem;
-    }
-
-
-    /* quick info section */
-    .info-card h3 {
-        padding: 0 0.2rem;
-    }
-
-    .info-card p {
-        padding: 0 0.2rem;
-    }
-
-    /* about video section */
-    .about-video h1 {
-        font-size: 2rem;
-    }
-
-    /* goals section */
-    .goals-card {
-        height: 34.5vh;
-    }
-    .course-goals h1 {
-        font-size: 2rem;
-    }
-
     /* FAQS PAGE */
     .faqs-grid {
         grid-template-rows: 100vh auto auto;
@@ -1241,66 +1148,18 @@ fieldset label {
 
     /* ABOUT PAGE */
 
-    .about-grid {
-        grid-template-rows: repeat(2, 100vh) 70vh 170vh;
-    }
-
     .pages-background {
         background-size: 636%;
         background-position: 79% 100%;
     }
 
-    .header-titles {
-        font-size: 4.3rem;
-        padding-top: 2em;
-        padding-bottom: 2em;
-    }
-
-    /* quick info section */
-    .info-card {
-        width: 56%;
-    }
-
-    .info-card h3 {
-        font-size: 2.15rem;
-    }
-
-    .info-card p {
-        font-size: 1.8rem;
-    }
-
-    /* about video section */
-    .about-video {
-        padding: 3em 0;
-    }
-
-    .about-video h1 {
-        font-size: 3.3rem;
-    }
-
     /* course goals section */
-    .course-goals {
-        gap: 2em;
-    }
-
-    .course-goals h1 {
-        font-size: 3.2rem;
-    }
-
     .goals-card {
-        height: 51.5vh;
+        height: calc(29rem + 5vh - 8vw);
     }
 
     .goals-text {
         padding: 0.3em 2em;
-    }
-
-    .goals-text h3 {
-        font-size: 2.5rem;
-    }
-
-    .goals-text p {
-        font-size: 2rem;
     }
 
     /* FAQS PAGE */
@@ -1459,6 +1318,15 @@ fieldset label {
 
 }
 
+/* bootstrap md */
+@media screen and (min-width:768px) {
+    .info-card-text {
+        padding: 0 calc(7.9vw - 2.9rem);
+    }
+
+}
+
+
 /* referencia iPad air */
 @media screen and (min-width:820px) {
 
@@ -1480,43 +1348,9 @@ fieldset label {
 
     /* ABOUT PAGE */
 
-    .header-titles {
-        font-size: 4.6rem;
-    }
-
-    .about-start-btn {
-        font-size: 1.5rem;
-    }
-
     /* quick info section */
     .quick-info {
         gap: 3.6em
-    }
-
-    .info-card h3 {
-        font-size: 2.3rem;
-    }
-
-    .info-card p {
-        font-size: 2rem;
-    }
-
-    /* about video section */
-    .about-video {
-        padding: 4.1em 0;
-    }
-
-    .about-video h1 {
-        font-size: 3.5rem;
-    }
-
-    /* course goals section */
-    .course-goals {
-        gap: 2.4em;
-    }
-
-    .course-goals h1 {
-        font-size: 3.5rem;
     }
 
     /* FAQS PAGE */
@@ -1573,7 +1407,6 @@ fieldset label {
         font-size: 4.8rem;
     }
 
-
 }
 
 /* bootstrap lg */
@@ -1585,7 +1418,6 @@ fieldset label {
         flex-grow: 0!important;
         align-items: inherit;
     }
-    /*...*/
 
     /* Navbar */
     header  a {
@@ -1642,11 +1474,52 @@ fieldset label {
         color: #0c0c0c;
         font-weight: 700;
     }
+
     /* ends navbar */
 
     .hero-banner {
         padding-left: 8rem;
     }
+
+    /* quick info section */
+    .quick-info {
+        flex-direction: row;
+        justify-content: space-evenly;
+        /* gap: unset; */
+    }
+
+    .info-card {
+        height: 100%;
+        justify-content: center;
+    }
+
+    .info-card p {
+        line-height: 1.3;
+    }
+
+    /* course goals section */
+
+    .goals-card {
+        width: calc(100% / 3);
+    }
+
+    .goals-img {
+        background-position: center;
+    }
+
+    .goals-text {
+        height: calc(34rem - 16vw);
+    }
+
+    .goals-text h3 {
+        font-size: calc(0.85rem + 1vw);
+    }
+
+    .goals-text p {
+        font-size: 1.6rem;
+        font-size: calc(1rem + 0.55vw);
+    }
+
 }
 
 /* iPad mini horizontal */
@@ -1672,7 +1545,7 @@ fieldset label {
     }
 
     section h1 {
-        font-size: calc(0.8rem + 3.4vw);
+        font-size: calc(1rem + 3.4vw);
     }
 
     /* single payment section */
@@ -1688,83 +1561,9 @@ fieldset label {
 
     /* ABOUT PAGE */
 
-    .about-grid {
-        grid-template-rows: 100vh 60vh 100vh 100vh;
-    }
-
-
     .pages-background {
         background-size: 351%;
         background-position: 74% 78%;
-    }
-
-    .header-titles {
-        padding: 1em 2em;
-        line-height: 1.2;
-    }
-
-    /* quick info section */
-    .quick-info {
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: unset;
-    }
-
-    .info-card {
-        width: 35%;
-        height: 100%;
-        justify-content: center;
-    }
-
-    .info-card h3 {
-        font-size: 1.95rem;
-    }
-
-    .info-card p {
-        font-size: 1.7rem;
-        line-height: 1.3;
-    }
-
-    .info-card-img {
-        display: flex;
-        height: 50%;
-    }
-
-    .info-card-text {
-        display: flex;
-        flex-direction: column;
-        gap: 0.3em;
-        height: 33%;
-    }
-
-    .about-video {
-        padding: 3em 0;
-        gap: 2.1em;
-    }
-
-    /* course goals section */
-    .goals-cards-container {
-        flex-direction: row;
-    }
-
-    .goals-card {
-        height: 79vh;
-    }
-
-    .goals-img {
-        background-position: center;
-    }
-
-    .goals-text {
-        height: 64%;
-    }
-
-    .goals-text h3 {
-        font-size: 1.75rem;
-    }
-
-    .goals-text p {
-        font-size: 1.6rem;
     }
 
     /* FAQS PAGE */
@@ -1856,7 +1655,6 @@ fieldset label {
         padding-top: 0em;
     }
 
-
     /* general */
 
     #start-link-to-video {
@@ -1878,10 +1676,9 @@ fieldset label {
     }
 
     /* best routines section */
-    
+
     .best-routines-section h1 {
         line-height: 1.3;
-        width: 65%;
     }
 
     .price {
@@ -1895,18 +1692,16 @@ fieldset label {
     /* ABOUT PAGE */
 
     .about-grid {
-        grid-template-rows: 55vh 45vh 130vh 88vh;
+        grid-template-rows: 55vh repeat(3, auto);
 
-    }
+    } 
 
     .about-grid .hero-banner {
         padding-left: 0;
     }
 
     .header-titles {
-        place-self: center;
         padding: unset;
-        font-size: 2.7rem;
     }
 
     .pages-background {
@@ -1929,42 +1724,15 @@ fieldset label {
     .info-card {
         flex-direction: row;
         height: 100%;
+        width: 40%;
         justify-content: center;
         align-items: center;
-    }
-    .info-card-img {
-        height: 55%;
-    }
-
-    .info-card-text {
-        height: 55%;
-        width: 43%;
-        gap: 0.5rem;
-    }
-
-    .info-card h3 {
-        font-size: 1.2rem;
-    }
-
-
-    .info-card p {
-        font-size: 1.2rem;
-    }
-
-    /* about video section */
-    .about-video h1 {
-        font-size: 2.4rem;
     }
 
     /* course goals section */
 
-    .course-goals {
-        justify-content: flex-start;
-        padding-top: 2em;
-    }
-
     .course-goals h1 {
-        font-size: 2.4rem;
+        font-size: calc(1rem + 2.4vw);
         align-self: flex-start;
         margin-left: 3rem;
     }
@@ -1972,22 +1740,6 @@ fieldset label {
     .course-goals .divider_1 {
         align-self: flex-start;
         margin-left: 4rem;
-    }
-
-    .goals-cards-container {
-        width: 93%;
-    }
-    .goals-card {
-        height: 60vh;
-        width: 33%;
-    }
-
-    .goals-text h3 {
-        font-size: 1.5rem;
-    }
-
-    .goals-text p {
-        font-size: 1.2rem;
     }
 
     /* FAQS PAGE */

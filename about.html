@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amaze Anywhere - Fascinating Card Magic</title>
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="./bootstrap-5.1.3-dist/js/bootstrap.js"></script>
     <script data-search-pseudo-elements defer src="https://pro.fontawesome.com/releases/v5.10.1/js/all.js"></script>
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="img/logo.png" alt="Amaze Anywhere logo" class="logo"></a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <nav>
-            <ul class="nav__links">
+    <header class="d-flex text-center align-items-center justify-content-center position-fixed justify-content-lg-between px-lg-5 vw-100">
+        <a href="index.html"><img src="img/logo.png" alt="Amaze Anywhere logo" class="logo"></a> 
+        <nav class="collapse navbar-collapse col-12 col-lg-7 col-xl-6 d-lg-flex" id="navbarSupportedContent">
+            <ul class="nav__links d-flex flex-column p-0 mb-4 mt-2 mb-lg-0 mt-lg-0 flex-lg-row justify-content-lg-between align-items-lg-center">
                 <li>
                     <a href="index.html">Home</a>
                 </li>
@@ -29,93 +30,101 @@
                 <li><button><a href="buy.html" class="enroll-btn">Enroll today</a></button></li>
             </ul>
         </nav>
-        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+        
+        <button class="navbar-toggler p-0 nav-toggle-label position-absolute d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+        </button>
     </header>
     <main class="about-grid about-bg-img">
         <div class="pages-background">
-            <div class="hero-banner about-banner ">
-                <h1 class="header-titles">Fascinating Card Magic</h1>  
-                <button id="about-start"><a href="#quick-info"><div class="about-start-btn"> Kwow the course <i aria-hidden="true" class="fas fa-angle-down"></i></div></a></button>
+            <div class="about-banner d-flex flex-column align-items-center justify-content-around h-100">
+                <h1 class="header-titles text-uppercase fst-italic">Fascinating Card Magic</h1>  
+                <button id="about-start"><a href="#quick-info"><div class="about-start-btn text-uppercase border border-light rounded-pill d-xl-none"> Kwow the course <i aria-hidden="true" class="fas fa-angle-down"></i></div></a></button>
             </div>
         </div>
-        
-        <section class="quick-info" id="quick-info">
-            <!-- <div class="info-background"> -->
-                <div class="info-card">
-                    <div class="info-card-img">
-                        <img src="img/pc-man.webp"  alt="man on pc">
+
+        <section class="quick-info section-spacing d-flex flex-column align-items-center justify-content-center flex-md-row align-items-md-start justify-content-md-evenly " id="quick-info">
+                <div class="info-card card bg-transparent border-0 flex-xl-row align-items-center align-items-xl-start">
+                    <div class="info-card-img d-flex flex-column align-items-center">
+                        <img class="img-fluid" src="img/pc-man-300x185.jpg"  alt="man on pc">
                     </div>
-                    <div class="info-card-text">
-                        <h3>Course Modality</h3>
-                        <p>Online. You can see it whenever you want and from wherever you are</p>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <div class="info-card-img">
-                        <img src="img/Baraja.webp"  alt="man on pc">
-                    </div>
-                    <div class="info-card-text">
-                        <h3>Requisites</h3>
-                        <p>You only would need a deck of cards and desire to learn!</p>
+                    <div class="info-card-text card-body p-xl-0 col-xl-7 ">
+                        <h3 class="text-uppercase fst-italic text-nowrap" >Course Modality</h3>
+                        <p class="m-0">Online. You can see it whenever you want and from wherever you are.</p>
                     </div>
                 </div>
-            <!-- </div> -->
+
+                <div class="info-card card bg-transparent border-0 flex-xl-row align-items-center align-items-xl-start">
+                    <div class="info-card-img d-flex flex-column align-items-center">
+                        <img class="img-fluid" src="./img/cards-info-300x185.jpg"  alt="man on pc">
+                    </div>
+                    <div class="info-card-text card-body p-xl-0 col-xl-7">
+                        <h3 class="text-uppercase fst-italic">Requisites</h3>
+                        <p class="m-0">You only would need a deck of cards and desire to learn!</p>
+                    </div>                                                        
+                </div>
         </section>
+
             <!-- Welcome -->
-        <section class="about-video">
+        <section class="about-video d-flex flex-column align-items-center justify-content-center section-spacing">
 
                 <h1>What is the course about</h1>
                 <div class="divider_1"></div>
 
-                <div id="start" class="video" >
-                    <!-- <iframe src="https://player.vimeo.com/video/598020474?h=6b0ccb0366&title=0&byline=0&portrait=0" width="1135" height="640" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>             -->         
-                    <iframe class="iframe" allowfullscreen="" title="Reproductor de vídeo vimeo" src="https://player.vimeo.com/video/597820867?color&amp;autopause=0&amp;loop=0&amp;muted=0&amp;title=0&amp;portrait=0&amp;byline=0#t="></iframe>     
+                <div class="col-12 col-lg-10">
+                    <div id="start" class="ratio ratio-16x9 video">
+                        <!-- <iframe src="https://player.vimeo.com/video/598020474?h=6b0ccb0366&title=0&byline=0&portrait=0" width="1135" height="640" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>             -->         
+                        <iframe class="iframe" allowfullscreen="" title="Reproductor de vídeo vimeo" src="https://player.vimeo.com/video/597820867?color&amp;autopause=0&amp;loop=0&amp;muted=0&amp;title=0&amp;portrait=0&amp;byline=0#t="></iframe>     
+                    </div>
                 </div>
+
             </section>
-            <section class="course-goals">
-                <h1>Course goals</h1>
-                <div class="divider_1"></div>
-                <div class="goals-cards-container">
-                    <div class="goals-card">
-                        <div class="goals-img-container">
-                            <div class="goals-img goals-img-1"></div>
-                            <div class="goals-img-fx"></div>
+            <section class="course-goals d-flex flex-column align-items-center justify-content-center">
+                <div class="goals-margins d-flex flex-column align-items-center justify-content-end align-items-lg-start col-sm-10 col-md-8 col-lg-11 col-xl-10 section-spacing">
+                    <h1 class="ms-lg-3">Course goals</h1>
+                    <div class="divider_1 ms-lg-4"></div>
+                    <div class="goals-cards-container d-flex flex-column flex-lg-row">
+                        <div class="goals-card d-flex flex-column position-relative">
+                            <div class="goals-img-container">
+                                <div class="goals-img goals-img-1"></div>
+                                <div class="goals-img-fx"></div>
+                            </div>
+                            <div class="goals-text">
+                                <h3>Amaze</h3>
+                                <p>You will learn high-impact routines that work in any situation and with any public</p>
+                            </div>
+                            <div class="goals-card-fx"></div>
                         </div>
-                        <div class="goals-text">
-                            <h3>Amaze</h3>
-                            <p>You will learn high-impact routines that work in any situation and with any public</p>
+                        <div class="goals-card d-flex flex-column position-relative">
+                            <div class="goals-img-container">
+                                <div class="goals-img goals-img-2"></div>
+                                <div class="goals-img-fx"></div>
+                            </div>
+                            <div class="goals-text">
+                                <h3>Experiences</h3>
+                                <p>You will be able to connect with people on another level and create moments that will be remembered for life</p>
+                            </div>
+                            <div class="goals-card-fx"></div>
                         </div>
-                        <div class="goals-card-fx"></div>
-                    </div>
-                    <div class="goals-card">
-                        <div class="goals-img-container">
-                            <div class="goals-img goals-img-2"></div>
-                            <div class="goals-img-fx"></div>
+                        <div class="goals-card d-flex flex-column position-relative">
+                            <div class="goals-img-container img3-adjust">
+                                <div class="goals-img goals-img-3"></div>
+                                <div class="goals-img-fx"></div>
+                            </div>
+                            <div class="goals-text">
+                                <h3>Tools</h3>
+                                <p>You will develop new ways of thinking, different types of skills, and master card illusionism.</p>
+                            </div>
+                            <div class="goals-card-fx"></div>
                         </div>
-                        <div class="goals-text">
-                            <h3>Experiences</h3>
-                            <p>You will be able to connect with people on another level and create moments that will be remembered for life</p>
-                        </div>
-                        <div class="goals-card-fx"></div>
-                    </div>
-                    <div class="goals-card">
-                        <div class="goals-img-container img3-adjust">
-                            <div class="goals-img goals-img-3"></div>
-                            <div class="goals-img-fx"></div>
-                        </div>
-                        <div class="goals-text">
-                            <h3>Tools</h3>
-                            <p>You will develop new ways of thinking, different types of skills, and master card illusionism.</p>
-                        </div>
-                        <div class="goals-card-fx"></div>
                     </div>
                 </div>
             </section>
         </div>
     </main>
     <!-- Footer -->
-    <footer class="flex-item-r">
-        <p>Copyright © 2022 Amaze Anywhere</p>
+    <footer class="d-flex align-items-center justify-content-center">
+        <p class="m-1">Copyright © 2022 Amaze Anywhere</p>
     </footer>
 </body>
 <script>
