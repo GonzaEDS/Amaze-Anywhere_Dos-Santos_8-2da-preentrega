@@ -269,6 +269,7 @@ footer {
     background-image: url(../img/girl-amazed1.webp);
     background-size: 135%;
     background-position: -250%;
+    overflow: hidden;
     grid-area: single-payment;
 }
 
@@ -281,6 +282,7 @@ footer {
     height: calc(30% + 12vw);
     width: 40%;
     overflow: hidden;
+    z-index: 888;
 }
 
 .offer-band {
@@ -477,6 +479,7 @@ footer {
 .course-goals {
     grid-area: goals;
     background-size: cover;
+    overflow: hidden;
 }
 
 .goals-cards-container {
