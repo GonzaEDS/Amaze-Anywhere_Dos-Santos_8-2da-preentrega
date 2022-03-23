@@ -4,7 +4,7 @@
 :root {
     scroll-behavior: smooth;
 
-    --darkTransparentBg: #060606f7 /*#060606eb*/;
+    --darkTransparentBg: #060606f7;
     --whiteText: rgb(238, 235, 235);
     --whiteBlueBg: #d4d4de;
     --primary: #287c81fa;
@@ -97,7 +97,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--whiteText);
-    font-size: 1.2em;
+    font-size: calc(1.2rem + 0.35vw);
     font-weight: 100;
     transition: 250ms ease-in-out;
 }
@@ -127,6 +127,7 @@ nav button {
 .hero-banner {
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9532855378479517) 24%, rgba(0,212,255,0) 100%);
     height: 100vh;
+    padding-top: 4rem;
 }
 
 .hero-background {
@@ -153,10 +154,6 @@ nav button {
 
 #start-link-to-video {
     display: none;
-}
-
-.svg-inline--fa {
-    font-size: calc(1rem + 0.5vw);
 }
 
 /* animación botón */
@@ -256,6 +253,7 @@ footer {
 
 .best-routines-section {
     grid-area: best-routines;
+    overflow: hidden;
 }
 
 .best-routines-section img {
@@ -296,7 +294,6 @@ footer {
     top: calc(6% + 3.2VW);
     left: 7%;
 }
-
 
 .sp-card {
     background-color: #4d4d4d;
@@ -352,6 +349,7 @@ footer {
     color: white;
     font-size: calc(1.7rem + 2vw);
     width: min-content;
+    margin: 0;
 }
 
 /* ABOUT */
@@ -368,7 +366,6 @@ footer {
         "goals";
 }
 
-
 .about-bg-img {
     background-image: url(../img/cards-background.webp);
     background-size: 205%;
@@ -380,14 +377,19 @@ footer {
 .pages-background {
     grid-area: banner;
     background-image: url(../img/fondo-prueba1.png);
-    background-size: 1041%;
+    background-size: cover;
     background-position: 76% 100%;
+    background-position: calc(73% - 12vw) 100%;
     filter: drop-shadow(1px 3px 1px black);
 }
 
 .about-banner {
     background: linear-gradient(90deg, rgb(0 0 0) 23%, rgb(0 0 0 / 82%) 44%, rgb(19 0 32 / 28%) 100%);
-    padding-top: 5rem;
+    
+}
+
+.about-grid .about-banner {
+    padding-top: 7rem;
 }
 
 .about-start-btn {
@@ -447,6 +449,7 @@ footer {
     height: 100%;
     box-shadow: 0px 0px 3px 2px #2a5a6c;
 }
+
 .info-card-text {
     padding: 0;
     min-width: 51%;
@@ -565,17 +568,10 @@ footer {
 
 /* FAQS PAGE */
 
-
-.faqs-page .header-titles {
-    padding-top: 0em;
-    padding-bottom: 3em;
-    line-height: 1.5;
-}
-
 .faqs-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh 124vh 70vh;
+    grid-template-rows: 100vh repeat(2, auto);
     grid-template-areas: "banner" "faqs" "guarantee";
 }
 
@@ -585,25 +581,20 @@ footer {
     grid-area: faqs;
     border-top: 2em solid #2a023447;
     background: linear-gradient(45deg, #31758f, #23434fc7), linear-gradient(45deg, #256c8747, #2e5f7042);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
 }
-
 
 /* question divider */
 .question-divider {
     display: flex;
     align-items: center;
     gap: 1em;
-    width: 87%;
-    align-self: center;
 }
+
 .faqs .fa-question-circle {
     color: #cadeef;
+    font-size: calc(0.8rem + 1.5vw);
 }
+
 .faqs .rule {
     border-bottom: 2px solid rgb(142 175 203);
     width: 50%;
@@ -611,114 +602,107 @@ footer {
 /* ends question divider */
 
 .faqs-divider {
-    width: 85%;
     border-bottom: 2px solid rgb(142 175 203);
+    margin: calc(1rem + 1vw) 0 calc(1rem + 1vw);
 }
-
 
 .fa-ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1em;
+    margin: 0;
 }
 
 .fa-ul>li {
     position: relative;
+    margin-left: calc(1rem + 2.3vw);
+    transform: translate(-8px, 0);
+}
+
+.fa-ul label {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1em;
 }
 
 .faqs .fa-chevron-up {
     color: white;
     font-weight: 100;
-    font-size: 1rem;
+    font-size: calc(0.4rem + 2.2vw);
+    font-size: calc(0.55rem + 1.4vw);
+    vertical-align: baseline;
 }
 
 .faqs h2 {
     font-family: var(--sansSerifFont);
     color: white;
-    font-size: 1rem;
+    font-size: calc(0.759rem + 1.5vw);
     text-transform: uppercase;
     font-style: italic;
     font-weight: 500;
-    width: 90%;
+    margin-bottom: 0;
 }
 
 .faqs p {
     color: #ffffffe6;
     line-height: 1.5;
     align-self: center;
-    transform: translate(-1.3em, 0);
     text-align: justify;
-    width: 91%;
+    width: 90%;
+    /* font-size: calc(0.7rem + 1.64vw); */
+    font-size: calc(0.5rem + 1.8vw);
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
+
+.fa-li {
+    transition: 0.2s ease-out;
+    left: calc(-1.4rem - 1.9vw);
+}
+
+input:checked + li label .fa-li {
+    transform: rotate(180deg);
+}
+
 
 /* guarantee section */
 
-
-
 .guarantee {
     grid-area: guarantee;
-    display: flex;
-    flex-direction: column;
-    background: url(../img/cardsbackground2.png);
+    background-image: url(../img/cardsbackground2.png);
+    background-color: #fdff2054;
+    background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
-    justify-content: center;
-    align-items: center;
-
 }
 
 .cardsbackground {
-
     filter: drop-shadow(2px 4px 6px black);
-    background: linear-gradient(90deg, #bfa5008c, #bfa5008c);
-    background: linear-gradient(90deg, #efd94e8a, #ffe4388c);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* background: linear-gradient(90deg, #bfa5008c, #bfa5008c); */
+    background: linear-gradient(90deg, #bdd1d81c, #34738b17);
+    /* height: 100%; */
     width: 100%;
 }
 
-
 .guarantee-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    width: 90%;
-    height: 90%;
-
-    background: linear-gradient(90deg, rgb(0 0 0 / 82%), rgb(0 0 0 / 66%));
-    color: rgb(142 175 203);
+    border-radius: 1.5rem;
+    background: linear-gradient(90deg, rgb(0 0 0 / 70%), rgb(0 0 0 / 58%));
     color: rgb(150 182 209);
-    gap: 1em;
-    padding: 0 1em;
 }
 
 .guarantee-card h2 {
-    font-style: initial;
-    font-size: 1.5rem;
-    text-align: center;
-    color: rgb(142 175 203);
+    font-size: calc(1.1rem + 2.3vw);
     color: rgb(150 182 209);
-    font-family: var(--titlesFont);
+    font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
+    text-shadow: 0px 4px 2px #396e8361;
 }
 
-.guarantee-card p{
-    font-size: 1.15rem;
+.guarantee-card p {
+    font-size: calc(0.8rem + 1.1vw);
     text-align: justify;
     line-height: 1.5;
 }
 
 .guarantee-card img {
-    width: 80%;
     filter: drop-shadow(2px 4px 6px black);
 }
 
@@ -740,23 +724,18 @@ footer {
 /* quote section */
 .quote {
     grid-area: quote;
-    padding: 2em 1em;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    gap: 1em;
+    padding: calc(2.7rem + 2.5vw) 0;
+
 }
 
 .quote h3 {
     color: #3d7186;
     font-style: normal;
-    font-size: 0.95rem;
+    font-size: calc(0.8rem + 0.9vw);
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .divider_3 {
@@ -767,7 +746,7 @@ footer {
 
 .quote h1 {
     all: unset;
-    font-size: 1.5rem;
+    font-size: calc(1.2rem + 1.8vw);
     font-weight: 700;
     line-height: 1.3;
 }
@@ -777,7 +756,6 @@ footer {
     width: 100%;
     align-items: center;
     justify-content: center;
-    /* margin-top: -0.7em; */
     gap: 1em;
 }
 
@@ -786,8 +764,7 @@ footer {
 }
 
 .fa-quote-left {
-    /* padding: 1rem; */
-    font-size: 1rem;
+    font-size: calc(1rem + 1.2vw);
     color: #355f70;
 }
 
@@ -796,10 +773,6 @@ footer {
 .reviews {
     gap: 2em;
     background: linear-gradient(45deg, #31758f, #23434fc7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 2em 0;
 }
 
@@ -817,6 +790,7 @@ footer {
     color: #fffffffa;
     font-style: italic;
     font-size: 1.7rem;
+    font-size: calc(0.8rem + 2.9vw);
 }
 
 /* BUY PAGE */
@@ -828,22 +802,7 @@ footer {
     grid-template-areas: "banner" "summary" "buy-forms";
 }
 
-.buy {
-    background-color: #f5f6f7;
-}
-
-.summary-card-section {
-    padding-top: 2em;
-    grid-area: summary;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
 .summary-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 1em;
     width: 90%;
     padding: 1em;
@@ -851,120 +810,49 @@ footer {
     filter: drop-shadow(0px 1px 1px black);
 }
 
-.summary-card img {
-    width: 100%;
-}
-
-.summary-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-}
-
 .summary-text h3 {
-    font-family: 'lato', sans-serif;
-    font-style: normal;
-    font-size: 1rem;
-    text-transform: uppercase;
+
+    font-size: calc(1rem + 1.3vw);
     color: #2f2f2f;
-    font-weight: 500;
+
 }
 
-
-.summary-text p {
-    line-height: 2;
-    font-size: 1rem;
-}
-
-.buy-forms-section {
-    grid-area: buy-forms;
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
-    padding: 2em 0.4em;
-}
-
-.buy-forms-section h2 {
-    font-size: 1rem;
-    font-family: 'Lato';
-    font-style: normal;
-    text-transform: uppercase;
-    margin-bottom: 1em;
-    font-weight: 500;
-}
-
-.buy-forms-section fieldset {
-    border: 2px solid black;
-    position: relative;
-    background-color: #fffffffd;
-    border-radius: 1em;
-    box-shadow: -1px 1px 1px black;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7em;
-    padding: 1em;
-}
-
-.buy-forms-section legend {
-    position: absolute;
-}
-
-.account-form legend {
-    top: -3em;
-}
-
-.credit-card-form legend {
-    top: -2em;
-}
-
-.credit-card-form fieldset {
-    margin-top: -1em;
-}
-
-legend  h4 {
-    font-size: 0.9rem;
-}
-
-.buy .forms form {
-    padding: 2em;
+legend h5 {
+    font-size: calc(0.8rem + 0.9vw);
 }
 
 .buy-forms-section button {
-    width: 84px;
-    height: 2.5em;
-    color: #fffffffd;
-    background-color: black;
-    font-weight: 600;
-    padding: 0.5em;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    margin-left: 2em;
+    background: #151515;
+    width: calc(3.9rem + 0.9vw);
 }
 
 .buy-forms-section button:hover {
-    background-color: rgba(0, 0, 0, 0.829);
+    background-color: rgb(0, 0, 0);
 }
 
-.buy-forms-section input {
+.buy-forms-section input:not([type="checkbox"]) {
     border: 1px solid lightgray;
-    border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: calc(0.9rem + 0.5vw);
     font-family: helvetica;
-    outline: none;
-    padding: 0 15px;
-    color: rgba(0, 0, 0, 0.877);
-    height: 2em;
-    width: auto;
+    height: calc(2.3rem + 0.5vw);
+   
+}
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.18rem rgb(232 233 233);
 }
 
-.buy-forms-section input[type="checkbox"] {
-    height: unset;
-    margin: 0;
-}
+fieldset label, .col-form-label {
+    font-size: calc(0.9rem + 0.5vw);
+} 
 
-fieldset label {
-    font-size: 0.9rem;
+.form-control:focus {
+    box-shadow: 0 0 0 0.18rem rgb(232 233 233);
+}
+.form-check-input:focus {
+    border-color: #7f7f7f;
+
+    box-shadow: 0 0 0 0.1rem rgb(190 190 190);
 }
 
 /* MEDIA QUERIES */
@@ -978,6 +866,10 @@ fieldset label {
 
     /* ABOUT PAGE */
 
+    .fa-ul>li {
+        transform: none;
+    }
+
     /* quick info section */
     .quick-info {
         gap: 1.6em;
@@ -985,80 +877,9 @@ fieldset label {
 
     /* FAQS PAGE */
 
-    .faqs-grid {
-        grid-template-rows: 100vh 138vh 70vh;
-    }
-    .faqs-page .header-titles {
-        font-size: 2rem;
-    }
-
-    .faqs p {
-        font-size: 1.3rem;
-    }
-
-    .faqs h2 {
-        font-size: 1.3rem;
-    }
-
-    .fa-ul {
-        gap: 1.5em;
-    }
-
-    .guarantee-card p {
-        font-size: 1.25rem;
-    }
-
     /* TESTIMONIALS PAGE */
-
-    .testimonials-page .header-titles {
-        font-size: 2.5rem;
-    }
-
-    .quote {
-        gap: 1.3em;
-    }
-
-    .quote h3 {
-        font-size: 1.1rem;
-    }
-
-    .quote h1 {
-        font-size: 1.7rem;
-        transform: translate(-2px, 0px);
-    }
-
     .testimonials-bg {
         background-position-y: 95%;
-    }
-
-    .reviews h1 {
-        font-size: 1.8rem;
-    }
-
-    /* BUY PAGE */
-
-    .summary-text h3 {
-        font-size: 1.4rem;
-    }
-
-    .summary-text p {
-        font-size: 1.4rem;
-    }
-
-    .buy-forms-section h2 {
-        font-size: 1.4rem;
-    }
-
-    legend h4 {
-        font-size: 1.1rem;
-    }
-
-    fieldset label {
-        font-size: 1.2rem;
-    }
-
-    .buy-forms-section input {
-        font-size: 1.2rem;
     }
 
 }
@@ -1075,62 +896,13 @@ fieldset label {
         left: calc(5% + 3.5vw);
     }
 
-    /* FAQS PAGE */
-    .faqs-grid {
-        grid-template-rows: 100vh auto auto;
-    }
-
-    .faqs {
-        padding: 1em 0 2em;
-    }
-
-    .guarantee-card {
-        padding: 3em 2em;
-    }
-
-    .faqs h2 {
-        font-size: 1.3rem;
-    }
-
-    /* TESTIMONIALS PAGE */
-
-    .testimonials-page .header-titles {
-        font-size: 2.8rem;
-    }
-    .quote h3 {
-        font-size: 1.3rem;
-    }
-
-    .quote h1 {
-        font-size: 1.9rem;
-        transform: translate(-2px, 0px);
-    }
-
-    /* BUY PAGE */
-
-    .buy-forms-section fieldset {
-        gap: 0.8em;
-        padding: 1.2em;
-    }
-
-}
-
-@media screen and (min-width:414px) {
-    .faqs h2 {
-        width: 92%;
-        font-size: 1.4rem;
-    }
 }
 
 /* referencia iPad mini (reducido para ajustarse a galaxy tab s4) */
 @media screen and (min-width:712px) {
 
-    header a {
-        font-size: 1.2rem;
-    }
-
     nav li a {
-        font-size: calc(0.8rem + 0.4vw);
+        /* font-size: calc(0.8rem + 0.4vw); */
         line-height: 1.3;
     }
 
@@ -1139,11 +911,6 @@ fieldset label {
     }
 
     /* ABOUT PAGE */
-
-    .pages-background {
-        background-size: 636%;
-        background-position: 79% 100%;
-    }
 
     /* course goals section */
     .goals-card {
@@ -1154,69 +921,8 @@ fieldset label {
         padding: 0.3em 2em;
     }
 
-    /* FAQS PAGE */
-    .faqs-page .header-titles {
-        font-size: 4rem;
-    }
-
-    .faqs h2 {
-        font-size: 1.9rem;
-        margin-left: 0.5em;
-    }
-
-    .faqs p {
-        font-size: 1.8rem;
-    }
-
-    .faqs .fa-chevron-up {
-        font-size: 1.4rem;
-        margin-bottom: -9px;
-    }
-    .fa-ul {
-        margin-left: 3rem;
-    }
-    .faqs .fa-question-circle {
-        font-size: 2rem;
-    }
-    .guarantee-card {
-        gap: 2em;
-        padding: 5em 2em;
-    }
-
-    .guarantee-card h2 {
-        font-size: 3rem;
-
-    }
-    .guarantee-card p {
-        font-size: 2rem;
-    }
-
-    .guarantee-card img {
-        width: 60%;
-    }
-
     /* TESTIMONIALS PAGE */
 
-    .testimonials-page .header-titles {
-        font-size: 4.5rem;
-    }
-
-    .quote {
-        padding: 4em 2.5em;
-        gap: 2em;
-    }
-
-    .quote h3 {
-        font-size: 1.8rem;
-    }
-
-    .quote h1 {
-        font-size: 2.8rem;
-    }
-
-    .fa-quote-left {
-        font-size: 2rem;
-    }
     .quotedivider {
         gap: 2em;
     }
@@ -1237,75 +943,8 @@ fieldset label {
         background-position-x: 62%;
     }
 
-    .reviws {
-        padding: 3em 0;
-    }
-
     .facebook-reviews-img-mobile {
         width: 75%;
-    }
-
-    .reviews h1 {
-        font-size: 4.5rem;
-    }
-
-    /* BUY PAGE */
-
-    .summary-card-section {
-        padding: 4em 0 2em;
-    }
-
-    .summary-card {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .summary-card img {
-        width: 40%;
-    }
-
-    .summary-text  h3 {
-        font-size: 1.8rem;
-    }
-
-    .summary-text p {
-        font-size: 1.9rem;
-    }
-
-    .buy-forms-section {
-        padding: 3em 2.4em;
-    }
-
-    .buy-forms-section h2 {
-        font-size: 1.9rem;
-        margin-bottom: 0.5em;
-    }
-
-    .buy-forms-section h2:nth-child(3) {
-        margin-bottom: 1em;
-    }
-
-    legend h4 {
-        font-size: 1.4rem;
-    }
-    .account-form legend {
-        top: -2em;
-    }
-    .buy-forms-section input {
-        width: 45%;
-        font-size: 1.4rem;
-    }
-
-    .buy-forms-section input[type="checkbox"] {
-        width: unset;
-    }
-
-    fieldset label {
-        font-size: 1.3rem;
-    }
-
-    .buy-forms-section button {
-        font-size: 1rem;
     }
 
 }
@@ -1345,60 +984,6 @@ fieldset label {
         gap: 3.6em
     }
 
-    /* FAQS PAGE */
-
-    .faqs {
-        padding: 2.5em 0 3em;
-    }
-
-    .faqs-page .header-titles {
-        font-size: 4.4rem;
-    }
-
-    .faqs h2 {
-        font-size: 2.3rem;
-    }
-
-    .faqs p {
-        font-size: 2rem;
-    }
-
-    .guarantee-card {
-        padding: 5em 2em;
-    }
-
-    .guarantee-card h2 {
-        font-size: 3.3rem;
-    }
-
-    .guarantee-card p {
-        font-size: 2.1rem;
-    }
-
-    /* TESTIMONIALS PAGE */
-
-    .quote {
-        gap: 2.5em;
-    }
-
-    .quote h3 {
-        font-size: 1.9rem;
-    }
-
-    .quote h1 {
-        font-size: 3.4rem;
-    }
-
-    /* reviews section */
-
-    .reviews {
-        padding: 3em 0;
-    }
-
-    .reviews h1 {
-        font-size: 4.8rem;
-    }
-
 }
 
 /* bootstrap lg */
@@ -1412,11 +997,6 @@ fieldset label {
     }
 
     /* Navbar */
-    header  a {
-        display: flex;
-        align-items: center;
-    }
-
     nav {
         all: unset;
     }
@@ -1424,6 +1004,7 @@ fieldset label {
     nav a {
         transition: all 0.3s ease 0s;
         font-weight: 400;
+        font-size: calc(1rem + 0.2vw);
     }
 
     nav a:hover {
@@ -1467,7 +1048,6 @@ fieldset label {
         font-weight: 700;
     }
 
-
     .hero-banner {
         padding-left: 8rem;
     }
@@ -1506,7 +1086,6 @@ fieldset label {
     }
 
     .goals-text p {
-        font-size: 1.6rem;
         font-size: calc(1rem + 0.55vw);
     }
 
@@ -1549,44 +1128,11 @@ fieldset label {
         left: calc(7% + 3.5vw);
     }
 
-    /* ABOUT PAGE */
-
-    .pages-background {
-        background-size: 351%;
-        background-position: 74% 78%;
-    }
-
-    /* FAQS PAGE */
-
-    .guarantee-card {
-        padding: 5em 4em;
-    }
-
-    .guarantee-card img {
-        width: 45%;
-    }
-
     /* TESTIMONIALS PAGE */
-    .quote {
-        padding: 5em 3.5em;
-        gap: 2.5em;
-    }
-
-    .quote h3 {
-        font-size: 1.5rem;
-    }
-
-    .quote h1 {
-        font-size: 2.4rem;
-    }
 
     /* reviews section */
     .reviews {
         padding: 3em 0;
-    }
-
-    .reviews h1 {
-        font-size: 3rem;
     }
 
     .facebook-reviews-img {
@@ -1602,31 +1148,6 @@ fieldset label {
         background-position-y: 82%;
     }
 
-    /* BUY PAGE */
-
-    .summary-card {
-        padding: 2em;
-    }
-
-    .summary-card img {
-        width: 26%;
-    }
-
-    .summary-text {
-        gap: 1.5em;
-        align-items: center;
-        padding: 0.5em 0;
-    }
-
-    .summary-text h3 {
-        font-size: 1.6rem;
-    }
-
-    .buy-forms-section fieldset {
-        gap: 0.9em;
-        padding: 2em;
-    }
-
 }
 
 /* pantallas */
@@ -1634,10 +1155,6 @@ fieldset label {
 
     header {
         padding: 0 3rem 0 2rem;
-    }
-
-    header a {
-        font-size: 1rem;
     }
 
     .hero-background .hero-banner {
@@ -1732,50 +1249,13 @@ fieldset label {
     }
 
     /* FAQS PAGE */
+
     .faqs-grid {
-        grid-template-rows: 55vh auto auto;
+        grid-template-rows: 55vh repeat(2, auto);
     }
 
-    .faqs-page .header-titles {
-        font-size: 2.4rem;
-        padding-bottom: 0;
-    }
-
-    .faqs-page .hero-banner {
-        padding-left: 0;
-    }
-
-    .faqs {
-        padding: 2.5em 5em 3em;
-    }
-
-    .faqs h2 {
-        font-size: 1.5rem;
-    }
-
-    .faqs p {
-        font-size: 1.3rem;
-    }
-
-    .faqs-divider {
-        width: 88%;
-        margin-left: 2em;
-    }
-
-    .guarantee-card {
-        padding: 4em 2em;
-    }
-
-    .guarantee-card h2 {
-        font-size: 2.3rem;
-    }
-
-    .guarantee-card p {
-        font-size: 1.5rem;
-    }
-
-    .guarantee-card img {
-        width: 30%;
+    .fa-ul label {
+        align-items: center;
     }
 
     /* TESTIMONIALS PAGE */
@@ -1787,45 +1267,10 @@ fieldset label {
         grid-template-rows: 55vh auto auto;
     }
 
-    .quote {
-        padding: 5em 11.5em;
-    }
-
-    .quote h3 {
-        font-size: 1.25rem;
-    }
-
     /* BUY PAGE */
 
     .buy-grid {
         grid-template-rows: 55vh auto auto;
-    }
-
-    .summary-card {
-        gap: 3em;
-        width: 70%;
-    }
-
-    .sumary-card img {
-        width: 23%;
-    }
-
-    .summary-text h3 {
-        font-size: 1.4rem;
-    }
-
-    .buy-forms-section input {
-        width: 30%;
-        font-size: 1.2rem;
-    }
-
-    .buy-forms-section fieldset {
-        gap: 1.1em;
-    }
-
-    .buy-forms-section {
-        padding: 3em 8em;
-        gap: 4em;
     }
 
 }
