@@ -725,7 +725,7 @@ input:checked + li label .fa-li {
 .quote {
     grid-area: quote;
     padding: calc(2.7rem + 2.5vw) 0;
-
+    overflow: hidden;
 }
 
 .quote h3 {
@@ -802,6 +802,10 @@ input:checked + li label .fa-li {
     grid-template-areas: "banner" "summary" "buy-forms";
 }
 
+.summary-card-section {
+    overflow: hidden;
+}
+
 .summary-card {
     gap: 1em;
     width: 90%;
@@ -811,10 +815,8 @@ input:checked + li label .fa-li {
 }
 
 .summary-text h3 {
-
     font-size: calc(1rem + 1.3vw);
     color: #2f2f2f;
-
 }
 
 legend h5 {
